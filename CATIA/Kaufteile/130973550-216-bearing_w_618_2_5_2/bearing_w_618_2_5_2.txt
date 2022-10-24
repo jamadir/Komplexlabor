@@ -1,0 +1,11 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-27092016-074236";"";
+"REFERENCE";"W 618/2.5";"";
+"TraceParts.PartVersion";"1.2.6";"";
+"TraceParts.InstanceId";"10-27092016-07423675GNA5IPVYDLT63X1E8NP6LGX";"";
+"TraceParts.PartTitle";"Stainless steel single row deep groove ball bearing, Bore Ø 2.5 mm, Outside Ø 6 mm";"";
+"SUPPLIER";"SKF";"";
+"DESIGN";"Stainless steel single row deep groove ball bearing, Bore Ø 2.5 mm, Outside Ø 6 mm";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"MASS";"0.0002";"";
