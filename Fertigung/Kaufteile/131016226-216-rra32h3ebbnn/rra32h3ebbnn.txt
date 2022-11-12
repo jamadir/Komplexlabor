@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-23022015-110045";"";
+"REFERENCE";"RRA32H3EBBNN";"";
+"rs_stock_number";"7064363";"";
+"TraceParts.PartTitle";"ZF RRA32H3EBBNN Wippschalter Zweipoliger Ein/Aus-Schalter (DPST), Rastend, 12 A @ 125 V AC, Schwarz";"";
+"SUPPLIER_NAME";"RS Components";"";
+"Buy_Now";"https://uk.rs-online.com/web/p/products/7064363?cm_mmc=en-ds-_-mcad-_-traceparts-_-7064363'";"";
+"SUPPLIER";"Cherry";"";
+"DESIGN";"ZF RRA32H3EBBNN Wippschalter Zweipoliger Ein/Aus-Schalter (DPST), Rastend, 12 A @ 125 V AC, Schwarz";"";
+"TraceParts.InstanceId";"10-23022015-110045TOD1MEMOJ106X67V2JCLH0XJ";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"de";"";
+"TraceParts.PartVersion";"1.0.4";"";
