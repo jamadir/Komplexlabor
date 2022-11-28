@@ -95,8 +95,6 @@ void setup(void) {
 }
 
 void loop() {
-
-
   
   /* Get new sensor events with the readings */
   sensors_event_t a, g, temp;
@@ -105,34 +103,4 @@ void loop() {
 
   pos = map((a.acceleration.x)*1000,-10000,10000,0,180);
   myservo.write(pos);
-  Serial.print(a.acceleration.x);
-  Serial.print(" : ");
-  Serial.println(pos);
-  if(0){
-  /* Print out the values */
-  Serial.print("Acceleration X: ");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y: ");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z: ");
-  Serial.print(a.acceleration.z);
-  Serial.println(" m/s^2");
-
-  Serial.print("Rotation X: ");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y: ");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z: ");
-  Serial.print(g.gyro.z);
-  Serial.println(" rad/s");
-
-  Serial.print("Temperature: ");
-  Serial.print(temp.temperature);
-  Serial.println(" degC");
-
-  Serial.println("");
-  
-  
-  delay(500);
-  }
 }
