@@ -8,14 +8,18 @@
 
 Adafruit_MPU6050 mpu;
 
-  Servo myservo;  // create servo object to control a servo
+  Servo myservo;
+  Servo myservo2;
+  // create servo object to control a servo
   // twelve servo objects can be created on most boards
 
   int pos = 0;
+  int pos2 = 0;
 
 void setup(void) {
 
   myservo.attach(9);
+  myservo2.attach(6);
   Serial.begin(9600);
   while (!Serial)
     delay(10); // will pause Zero, Leonardo, etc until serial console opens
@@ -103,4 +107,9 @@ void loop() {
 
   pos = map((a.acceleration.x)*1000,-10000,10000,0,180);
   myservo.write(pos);
+  pos2 = map((a.acceleration.y)*1000,-10000,10000,0,180);
+  myservo2.write(pos2);
+  Serial.print(pos);
+  Serial.print(" : ");
+  Serial.println(pos2);
 }
