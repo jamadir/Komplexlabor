@@ -65,6 +65,8 @@ void loop() {
 
 
   if (((abs(a.acceleration.x) - diffaccx) == 0) && ((abs(a.acceleration.y) - diffaccy) == 0)) {
+    //Serial.print(" Driftmessung\t");
+    //Serial.print((abs(a.acceleration.x) - diffaccx));
     gyrodriftx = (1 - 0.05) * gyrodriftx + g.gyro.x * 0.05 * 57;
     gyrodrifty = (1 - 0.05) * gyrodrifty + g.gyro.y * 0.05 * 57;
 
@@ -72,12 +74,21 @@ void loop() {
 
   if (((abs(g.gyro.x) - diffgyrox) >= gyroswitch) || ((abs(g.gyro.y) - diffgyroy) >= gyroswitch)) {
     gyroswitchflag = true;
+    Serial.print("GYRO: ");
+    Serial.print(micros() - cycletime);
+    Serial.print("\t");
+    Serial.print(g.gyro.x * 57 - gyrodriftx);
+    Serial.print("\t");
+    Serial.print(g.gyro.y * 57 - gyrodrifty);
+    Serial.print(((micros() - cycletime) / 1e6));
+    Serial.print("\t");
 
     xvals[1] += map(((g.gyro.x * 57 - gyrodriftx) * ((micros() - cycletime) / 1e6)),-180,180,-10,10);
     yvals[1] += map(((g.gyro.y * 57 - gyrodrifty) * ((micros() - cycletime) / 1e6)),-180,180,-10,10);
 
   } else {
     gyroswitchflag = false;
+    Serial.println("Accmode");
   }
   cycletime = micros();
 
@@ -94,8 +105,11 @@ void loop() {
 void setservos(float accx, float accy) {
   pos = map((accx) * 1000, -8000, 8000, 1100, 1900);
   myservo. writeMicroseconds(pos-120);
+  Serial.print(pos);
+  Serial.print(" : ");
   pos2 = map((accy) * 1000, -8000, 8000, 1100, 1900);
-  myservo2.writeMicroseconds(pos2);
+  myservo2.write(pos2);
+  Serial.println(pos2);
 }
 
 float accx_filtered(float accx) {
