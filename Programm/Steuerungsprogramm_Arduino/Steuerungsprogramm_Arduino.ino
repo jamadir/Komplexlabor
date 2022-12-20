@@ -101,7 +101,6 @@ void loop() {
   diffgyroy = abs(g.gyro.y);
 }
 
-
 void setservos(float accx, float accy) {
   pos = map((accx) * 1000, -8000, 8000, 1100, 1900);
   myservo. writeMicroseconds(pos + xoffset);
@@ -120,3 +119,26 @@ float accy_filtered(float accy) {
   yvals[0] = (1 - filterfaktor) * yvals[0] + accy * filterfaktor;
   return yvals[0];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
